@@ -1,134 +1,25 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>天上掉骨头了</title>
-<script type="text/javascript" src="jquery-1.6.2.min.js"></script>
-<style>
-*{
-	margin:0;
-	padding:0;
-}
-li{
-	list-style:none;
-
-}
-#all{
-	width:600px;
-	height:400px;
-	
-	
-}
-
-</style>
-</head>
-
-<body>
-<div id="all">
-<h4 style="color:#039">得分:</h4>
-<ul> 
-<li id="dog1" style="float:left"><img id="bone1" src="http://d.picphotos.baidu.com/album/s%3D1600%3Bq%3D90/sign=07123d351ed8bc3ec20802ccb2bb9d6f/63d0f703918fa0ec6369ec02219759ee3d6ddb17.jpg"/></li>
-<li id="dog2" style="float:left"><img id="bone2" src="http://d.picphotos.baidu.com/album/s%3D1600%3Bq%3D90/sign=07123d351ed8bc3ec20802ccb2bb9d6f/63d0f703918fa0ec6369ec02219759ee3d6ddb17.jpg"/></li>
-<li id="dog3" style="float:left"><img id="bone3" src="http://d.picphotos.baidu.com/album/s%3D1600%3Bq%3D90/sign=07123d351ed8bc3ec20802ccb2bb9d6f/63d0f703918fa0ec6369ec02219759ee3d6ddb17.jpg"/></li>
-<li id="dog4" style="float:left"><img id="bone4" src="http://d.picphotos.baidu.com/album/s%3D1600%3Bq%3D90/sign=07123d351ed8bc3ec20802ccb2bb9d6f/63d0f703918fa0ec6369ec02219759ee3d6ddb17.jpg"/></li>
-<li id="dog5" ><img id="bone5" src="http://d.picphotos.baidu.com/album/s%3D1600%3Bq%3D90/sign=07123d351ed8bc3ec20802ccb2bb9d6f/63d0f703918fa0ec6369ec02219759ee3d6ddb17.jpg"/></li>
-</ul>
-
-</div>
-<img id="dog" src="http://b.picphotos.baidu.com/album/s%3D1600%3Bq%3D90/sign=ce2f052dcffcc3ceb0c0cd35a275edf9/0d338744ebf81a4cd83065c6d02a6059252da6bb.jpg"/>
-</body>
-<script>
-window.onload=function(){
-var a=0;
-var b=0;
-var c=0;
-var d=0;
-var e=0;
-var bonearea1=document.getElementById("bone1");
-var bonearea2=document.getElementById("bone2");
-var bonearea3=document.getElementById("bone3");
-var bonearea4=document.getElementById("bone4");
-var bonearea5=document.getElementById("bone5");
-var bonearea6=document.getElementById("bone6");
-function time(){ setInterval(function(){
-	var bone=Math.floor(Math.randow());
-	if(bone<0.2){
-		document.getElementById("bone1").src="bone.jpg"
-		var downa=setInterval(function(){
-			a++;
-			a=a%2;
-			$("#bone1").animate({
-				marginTop:1000*a},5000);
-				var bonetop1=parseInt($("#bone1".css("marginTop")));
-				if (bonetop>950){
-					$("#bone1").stop(true);
-					document.getElementById("bone1").style.marginTop="0px";
-					document.getElementById("bone1").src="bone.jpg"
-				}
-		},1000)
-	}else if (bone<4){
-		document.getElementById("bone2").src="bone.jpg"
-		var downa=setInterval(function(){
-			b++;
-			b=b%2;
-			$("#bone2").animate({
-				marginTop:1000*b},5000);
-				var bonetop1=parseInt($("#bone2".css("marginTop")))
-				if (bonetop>950){
-					$("#bone2").stop(true);
-					document.getElementById("bone2").style.marginTop="0px";
-					document.getElementById("bone2").src="bone.jpg"
-				}
-		},1000)
-		}else if (bone<6){
-		document.getElementById("bone3").src="bone.jpg"
-		var downa=setInterval(function(){
-			c++;
-			c=c%2;
-			$("#bone3").animate({
-				marginTop:1000*c},5000);
-				var bonetop1=parseInt($("#bone3".css("marginTop")))
-				if (bonetop>950){
-					$("#bone3").stop(true);
-					document.getElementById("bone3").style.marginTop="0px";
-					document.getElementById("bone3").src="bone.jpg"
-				}
-		},1000)
-		}else if (bone<4){
-		document.getElementById("bone2").src="bone.jpg"
-		var downa=setInterval(function(){
-			d++;
-			d=d%2;
-			$("#bone4").animate({
-				marginTop:1000*d},5000);
-				var bonetop1=parseInt($("#bone4".css("marginTop")))
-				if (bonetop>950){
-					$("#bone4").stop(true);
-					document.getElementById("bone4").style.marginTop="0px";
-					document.getElementById("bone4").src="bone.jpg"
-				}
-		},1000)
-		}else if (bone<4){
-		document.getElementById("bone2").src="bone.jpg"
-		var downa=setInterval(function(){
-			d++;
-			d=d%2;
-			$("#bone5").animate({
-				marginTop:1000*d},5000);
-				var bonetop1=parseInt($("#bone5".css("marginTop")))
-				if (bonetop>950){
-					$("#bone5").stop(true);
-					document.getElementById("bone5").style.marginTop="0px";
-					document.getElementById("bone5").src="bone.jpg"
-				}
-		},1000)
-		} 
-},1000)
-}
-  setInternet("time()",500)
- 
-				
-}
-
-</script>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>接骨头游戏</title>
+		<link rel="stylesheet" type="text/css" href="css/jiegutou.css" />
+	</head>
+	<body onmousemove="move()" ontouchmove"move()">
+		<p id="score">得分：</p>
+		<div id="MainBody">
+			<div id="bone0"></div>
+			<div id="bone1"></div>
+			<div id="bone2"></div>
+			<div id="bone3"></div>
+			<div id="bone4"></div>
+			<div id="bone5"></div>
+			<div id="bone6"></div>
+			<div id="bone7"></div>
+			<div id="bone8"></div>
+			<div id="bone9"></div>
+		</div>
+		<div id="dog"></div>
+	</body>
+	<script type="text/javascript" src="js/jiegutou.js"></script>
 </html>
