@@ -44,23 +44,24 @@ window.onresize = function() {
 	    		dh=DownSpeed[i];
 	    		if(dh>h*0.9+30){//判断是否到底部并销毁产生新的坠落物
 	    			DownSpeed[i]=0;
-	    			Bonex[i]= Math.random()*w*0.9;
+	    			Bonex[i]= Math.random()*(w-50);
 	                Downsize[i]=Math.random()*5+1;
 	                DownSpeed[i]=Math.random();
 	                sum++;
 	    		}
-	    		if(bones[i].style.top>h*0.8&&(Math.floor(bones[i].style.left)==mx)){//判断是否与接收器相碰，并销毁产生新的坠落物
+	    		if(dh>(h*0.7+50)&&parseInt(Bonex[i]/400)==parseInt(mx/400)){//判断是否与接收器相碰，并销毁产生新的坠落物
 	    			DownSpeed[i]=0;
 	    			Bonex[i]= Math.random()*w*0.9;
 	                Downsize[i]=Math.random()*5+1;
 	                DownSpeed[i]=Math.random();
 	                y++;
-	                sum++;
+	               
 	                document.getElementById("score").innerHTML="得分"+y+"分";
 	    				   
 	    		}
 	    		document.getElementById("sum").innerHTML="共错过"+sum+"个";
 	    	}
+	    	
 	    	setTimeout("down()", 100);
 	    }
 	    down();
